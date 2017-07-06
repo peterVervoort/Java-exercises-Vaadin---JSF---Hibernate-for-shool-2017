@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body>
+    <f:view>
+        <h:form>
+            <h:commandButton actionListener="#{ex4Bean.increment}" value="Button 1">
+                <f:ajax render="counter1"/>
+            </h:commandButton>
+            <h:outputText id="counter1" value="#{ex4Bean.counter}"/>
+            <p/>
+            <h:commandButton actionListener="#{ex4Bean.increment}" value="Button 2">
+                <f:ajax render="counter2"/>
+            </h:commandButton>
+            <h:outputText id="counter2" value="#{ex4Bean.counter}"/>
+            <p/>
+            <h:commandButton actionListener="#{ex4Bean.increment}" value="Button 3">
+                <f:ajax render="counter3"/>
+            </h:commandButton>
+            <h:outputText id="counter3" value="#{ex4Bean.counter}"/>
+            <p/>
+
+            <h:commandButton value="Update everything">
+                <f:ajax render="@form"/>
+            </h:commandButton>
+            <p/>
+            <h:commandButton actionListener="#{ex4Bean.setCounter(0)}" value="Reset all to zero.">
+                <f:ajax render="@form"/>
+            </h:commandButton>
+        </h:form>
+    </f:view>
+</h:body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+    <h:body>
+        <f:view>
+            <h:form id="from">
+                <p:panel id="panel">
+                    <p:autoComplete id="acSimple" value="#{ex5Bean.municipality}" completeMethod="#{ex5Bean.complete}" minQueryLength="2">
+                        <p:ajax event="itemSelect" listener="#{ex5Bean.handleSelected}" update="panel"/>
+                    </p:autoComplete>
+                    <h:outputText rendered="#{ex5Bean.selected}" value="Welcome in #{ex5Bean.municipality} !"/>
+                </p:panel>
+            </h:form>
+        </f:view>
+    </h:body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+    <h:body>
+        <f:view>
+            <h:form id="form">
+                <h:messages/>
+                <h:inputText id="text1" value="#{ex6Bean.text1}"/>
+                <h:inputText id="text2" value="#{ex6Bean.text2}">
+                    <f:validateLength maximum="10"/>
+                </h:inputText>
+                <h:inputText id="text3" value="#{ex6Bean.text3}"/>
+                <h:outputText value="You have entered #{ex6Bean.text1} #{ex6Bean.text2} #{ex6Bean.text3}."/>
+                <p/>
+                <h:commandButton value="submit"/>
+                <h:commandButton value="clear" immediate="true" actionListener="#{ex6Bean.reset}">
+                    <f:ajax render="form:text1 form:text2 form:text3"/>
+                </h:commandButton>
+            </h:form>
+        </f:view>
+    </h:body>
+</html>

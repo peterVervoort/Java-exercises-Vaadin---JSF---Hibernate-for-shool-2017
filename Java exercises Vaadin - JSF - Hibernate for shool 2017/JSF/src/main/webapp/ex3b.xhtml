@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+    <h:body>
+        <f:view>
+            <h:form id="form">
+                <p:inputText id="non" value="#{ex3Bean.nullOrNumber}"/>
+                <p:message for="non"/><p/>
+
+                <p:commandButton actionListener="#{ex3Bean.submit}" value="Go!" update="@form"/>
+            </h:form>
+        </f:view>
+    </h:body>
+</html>

@@ -1,0 +1,12 @@
+.settings/
+.metadata/
+bin/
+test-output/
+target/
+.project
+.classpath
+.springBeans
+*.jar
+MANIFEST.MF
+*.iml
+.idea

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ez="http://java.sun.com/jsf/composite">
+
+<h:head></h:head>
+<h:body>
+    <f:view>
+        <ui:composition template="./ex8Template.xhtml">
+
+            <ui:define name="body">
+                <div>
+                    <p/>
+                    I'm the dynamic content of "ex8Page2Content":
+                    <p/>
+                    <h:graphicImage value="resourses/images/jug2.png"/>
+                    <p/>
+                    <h:form>
+                        <h:commandButton value="change page" action="#{navigationControler.moveToPage1}"/>
+                    </h:form>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </f:view>
+</h:body>
+
+</html>

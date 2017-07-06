@@ -1,0 +1,13 @@
+@import "../valo/valo.scss";
+@include valo;
+
+
+.myapp{
+  font-family: "Courier 10 Pitch";
+  background-color: lightblue;
+
+  .mijnButton .v-button-caption{
+    color: red;
+  }
+  
+}

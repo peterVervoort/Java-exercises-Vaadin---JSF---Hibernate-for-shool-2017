@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body>
+    <f:view>
+        <h:form id="form1">
+            <h:outputText id="text1" value="#{eX7Bean.counter}"/>
+            <p/>
+            <h:commandButton actionListener="#{eX7Bean.incrementCounter}" value="previous" action="ex7a"/>
+            <h:commandButton actionListener="#{eX7Bean.incrementCounter}" value="next>>" action="ex7c"/>
+            <p/>
+            Page 2 of Ex7
+            <p/>
+            <h:commandButton actionListener="#{eX7Bean.resetCounter}" value="reset counter">
+                <f:ajax render="text1"/>
+            </h:commandButton>
+        </h:form>
+    </f:view>
+</h:body>
+</html>

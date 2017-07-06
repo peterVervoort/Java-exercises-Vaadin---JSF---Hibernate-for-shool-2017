@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body>
+    <f:view>
+        <h:form id="form">
+            <p:inputText id="name" value="#{ex3Bean.name}"/>
+            <p:message for="name"/><p/>
+            <p:inputText id="serial" value="#{ex3Bean.serial}"/>
+            <p:message for="serial"/><p/>
+            <p:calendar id="date" value="#{ex3Bean.date}"/>
+            <p:message for="date"/><p/>
+
+            <p:commandButton actionListener="#{ex3Bean.submit}" value="Go!" update="@form"/>
+        </h:form>
+    </f:view>
+</h:body>
+</html>

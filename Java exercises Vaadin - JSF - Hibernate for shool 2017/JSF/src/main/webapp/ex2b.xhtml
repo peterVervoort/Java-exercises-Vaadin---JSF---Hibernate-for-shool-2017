@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head></h:head>
+<h:body>
+    <f:view>
+        <h:form>
+            <p:inputText id="myInput" value="#{Ex2Bean}">
+                <p:watermark for="myInput" value="Type here"/>
+                <f:validator validatorId="numberValidator"/>
+            </p:inputText>
+            <p:message for="myInput"></p:message>
+            <h:outputText value="#{Ex2Bean.getText}" rendered="#{!facesContext.validationFailed}"/>
+            <p:commandButton action="#{Ex2Bean.showText}" value="Click me" update="@form"/>
+        </h:form>
+    </f:view>
+</h:body>
+</html>
